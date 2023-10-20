@@ -19,7 +19,7 @@ const catobj2 = new Cat();
 catobj1.color="black";
 catobj1.fav_toy="ball";
 catobj1.fav_place="bed";
-catobj2["color"]="white";
+catobj2['color']="white";
 catobj2["fav_toy"]="catnip";
 catobj2["fav_place"]="cattree";
 console.log(catobj1);
@@ -33,6 +33,12 @@ console.log(catobj2.getColor());
 console.log(catobj2.getFav_place());
 console.log(catobj2.getFav_toy());
 
+console.log("------------------------------");
+
+
+
+
+
 class Pirate {
   constructor(name, type, fav_food) {
     this.name = name;
@@ -41,15 +47,15 @@ class Pirate {
   }
 
   printName() {
-    console.log(this.name);
+    console.log(`Pirate Name is ${this.name}`);
   }
 
   printType() {
-    console.log(this.type);
+    console.log(`Pirate Type of ${this.name} is ${this.type}`);
   }
 
   printFavfood() {
-    console.log(this.fav_food);
+    console.log(`Favourite food of ${this.name} is ${this.fav_food}`);
   }
 }
 
@@ -65,15 +71,20 @@ const blackPearl = [
   new Pirate("Anne Bonny", "Corsairs", "Biscuits"),
 ];
 
+
+console.log("JOLLY ROGER ARRAY")
 jollyRoger.forEach((obj) => {
   obj.printName();
   obj.printFavfood();
   obj.printType();
 });
 
+console.log("BLACK PEARL ARRAY")
 blackPearl.forEach((obj) => {
     obj.printName();
     obj.printFavfood();
     obj.printType();
   });
 
+
+  
