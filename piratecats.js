@@ -1,27 +1,28 @@
 class Cat {
-    color;
-    fav_toy;
-    fav_place;
+  color;
+  fav_toy;
+  fav_place;
+  breed = "Persian";
 
-    getColor(){
-        return this.color;
-    }
-    getFav_toy(){
-        return this.fav_toy;
-    }
-    getFav_place(){
-        return this.fav_place;
-    }
+  getColor() {
+    return this.color;
+  }
+  getFav_toy() {
+    return this.fav_toy;
+  }
+  getFav_place() {
+    return this.fav_place;
+  }
 }
 
 const catobj1 = new Cat();
 const catobj2 = new Cat();
-catobj1.color="black";
-catobj1.fav_toy="ball";
-catobj1.fav_place="bed";
-catobj2['color']="white";
-catobj2["fav_toy"]="catnip";
-catobj2["fav_place"]="cattree";
+catobj1.color = "black";
+catobj1.fav_toy = "ball";
+catobj1.fav_place = "bed";
+catobj2["color"] = "white";
+catobj2["fav_toy"] = "catnip";
+catobj2["fav_place"] = "cattree";
 console.log(catobj1);
 console.log(catobj2);
 console.log("------------------------------");
@@ -34,10 +35,6 @@ console.log(catobj2.getFav_place());
 console.log(catobj2.getFav_toy());
 
 console.log("------------------------------");
-
-
-
-
 
 class Pirate {
   constructor(name, type, fav_food) {
@@ -66,25 +63,21 @@ const jollyRoger = [
 ];
 
 const blackPearl = [
-  new Pirate("Ching Shih", "Privateer", "Beef"),
-  new Pirate("Henry Morgan", "Buccaneers", "Dried beans"),
-  new Pirate("Anne Bonny", "Corsairs", "Biscuits"),
+  new Pirate("Ching Shih", "Buccaneers", "Beef"),
+  new Pirate("Henry Morgan", "Corsairs", "Dried beans"),
+  new Pirate("Anne Bonny", "Privateer", "Biscuits"),
 ];
 
-
-console.log("JOLLY ROGER ARRAY")
-jollyRoger.forEach((obj) => {
-  obj.printName();
-  obj.printFavfood();
-  obj.printType();
+console.log("JOLLY ROGER ARRAY");
+jollyRoger.forEach((pirate) => {
+  pirate.printName();
+  pirate.printFavfood();
+  console.log(`Type of ${pirate.name} is ${pirate.type}`);
 });
 
-console.log("BLACK PEARL ARRAY")
-blackPearl.forEach((obj) => {
-    obj.printName();
-    obj.printFavfood();
-    obj.printType();
-  });
-
-
-  
+console.log("BLACK PEARL ARRAY");
+blackPearl.forEach((pirate) => {
+  pirate.printName();
+  pirate.printFavfood();
+  console.log(`Type of ${pirate.name} is ${pirate.type}`);
+});
